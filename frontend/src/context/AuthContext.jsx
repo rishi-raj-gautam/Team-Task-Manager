@@ -29,8 +29,8 @@ export const AuthProvider = ({ children }) => {
     localStorage.setItem('task_user', JSON.stringify(userObj));
   };
 
-  const signup = async (name, email, password) => {
-    const userData = await api.signup(name, email, password);
+  const signup = async (name, email, password, role) => {
+    const userData = await api.signup(name, email, password, role);
     const userObj = {
       id: userData._id || userData.id,
       _id: userData._id || userData.id,

@@ -38,8 +38,8 @@ export const api = {
     return data;
   },
 
-  signup: async (name, email, password) => {
-    const { data } = await axiosInstance.post('/auth/signup', { name, email, password });
+  signup: async (name, email, password, role) => {
+    const { data } = await axiosInstance.post('/auth/signup', { name, email, password, role });
     localStorage.setItem('task_token', data.token);
     return data;
   },
