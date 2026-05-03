@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Workspace Members | Project Workspace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#ffdad9",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#ffb7b7",
+                        "on-primary-container": "#5a0a11",
+                        "on-surface": "#1b1c17",
+                        "surface-container": "#efeee6",
+                        "on-tertiary-fixed-variant": "#4d472f",
+                        "on-tertiary-container": "#302b16",
+                        "primary-container": "#e1716f",
+                        "secondary-fixed-dim": "#fcb4b4",
+                        "on-secondary-fixed-variant": "#6b3839",
+                        "on-primary-fixed-variant": "#802829",
+                        "on-primary-fixed": "#410006",
+                        "tertiary-fixed-dim": "#d0c6a7",
+                        "surface": "#fbfaf2",
+                        "surface-bright": "#fbfaf2",
+                        "on-secondary-container": "#7b4546",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#ede2c2",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error": "#ffffff",
+                        "inverse-on-surface": "#f2f1e9",
+                        "surface-tint": "#9f3f3f",
+                        "on-error-container": "#93000a",
+                        "primary-fixed-dim": "#ffb3b0",
+                        "on-tertiary-fixed": "#201b07",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#360e10",
+                        "surface-container-low": "#f5f4ec",
+                        "primary-fixed": "#ffdad8",
+                        "outline": "#897270",
+                        "tertiary-container": "#9b9276",
+                        "on-background": "#1b1c17",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#dbdad3",
+                        "tertiary": "#655e45",
+                        "primary": "#9f3f3f",
+                        "surface-variant": "#e3e3db",
+                        "background": "#fbfaf2",
+                        "surface-container-high": "#e9e8e1",
+                        "surface-container-highest": "#e3e3db",
+                        "on-surface-variant": "#564241",
+                        "secondary": "#864f50",
+                        "inverse-surface": "#30312c",
+                        "inverse-primary": "#ffb3b0",
+                        "outline-variant": "#dcc0be"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "12px",
+                        "xs": "8px",
+                        "xl": "80px",
+                        "md": "24px",
+                        "gutter": "24px",
+                        "base": "4px",
+                        "margin": "32px",
+                        "lg": "48px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Manrope"],
+                        "h1": ["Manrope"],
+                        "h2": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "status": ["Manrope"],
+                        "label-md": ["Manrope"],
+                        "h3": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "h2": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "status": ["12px", {"lineHeight": "1", "letterSpacing": "0.02em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fbfaf2;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-background">
+<!-- Sidebar Navigation -->
+<aside class="fixed left-0 top-0 h-full flex flex-col z-40 bg-[#FDFCFB] dark:bg-stone-950 h-screen w-64 border-r border-stone-100 dark:border-stone-900 shadow-none">
+<div class="p-6 flex flex-col gap-1">
+<h2 class="text-lg font-black text-[#E1716F]">Workspace</h2>
+<p class="font-manrope text-[10px] font-semibold uppercase tracking-wider text-stone-400">Collaborative Hub</p>
+</div>
+<nav class="flex-1 px-2 space-y-1">
+<a class="text-stone-600 dark:text-stone-400 py-3 px-4 flex items-center gap-3 font-manrope text-sm font-semibold uppercase tracking-wider hover:text-[#E1716F] hover:bg-[#F9EBEA] transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                Dashboard
+            </a>
+<a class="text-stone-600 dark:text-stone-400 py-3 px-4 flex items-center gap-3 font-manrope text-sm font-semibold uppercase tracking-wider hover:text-[#E1716F] hover:bg-[#F9EBEA] transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="folder">folder</span>
+                Projects
+            </a>
+<a class="text-[#E1716F] bg-[#F9EBEA] dark:bg-[#E1716F]/10 border-l-4 border-[#E1716F] py-3 px-4 flex items-center gap-3 font-manrope text-sm font-semibold uppercase tracking-wider" href="#">
+<span class="material-symbols-outlined" data-icon="group" style="font-variation-settings: 'FILL' 1;">group</span>
+                Workspace Members
+            </a>
+<a class="text-stone-600 dark:text-stone-400 py-3 px-4 flex items-center gap-3 font-manrope text-sm font-semibold uppercase tracking-wider hover:text-[#E1716F] hover:bg-[#F9EBEA] transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+                Schedule
+            </a>
+<a class="text-stone-600 dark:text-stone-400 py-3 px-4 flex items-center gap-3 font-manrope text-sm font-semibold uppercase tracking-wider hover:text-[#E1716F] hover:bg-[#F9EBEA] transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                Settings
+            </a>
+</nav>
+<div class="p-4 mt-auto">
+<div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-xl">
+<img alt="User Profile" class="w-8 h-8 rounded-full bg-secondary-container" data-alt="A professional close-up headshot of a smiling young creative professional in a warm-toned, modern studio. The lighting is soft and golden, matching a terracotta and cream palette. The style is clean, corporate but approachable, highlighting a friendly workplace atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACv_XG9IOfvnUdyjOz11uUkq09VpdrrQaZ_812Dw7LoNWb-DV2almteFANAp8Kwa62ruty9HI0HgRaUpq26bnHpBuWqOr37BR1TNVa85WkRaoVwU9hvUKZ8Ri4y0DR2lfMtujf2oS6QLSP6yxRSqERtkzW8Vx5A24V4ZAAerSRHGmOGRgM9Z2PXRjZr-ja_ofWnKzC0OChHSvdig8cM-Xh7di0TYNKL1Nn28stJoW9ZZBbqjZOnCPiQMGDZB0r6g8yt3mWfmm-ct0"/>
+<div>
+<p class="font-label-md text-on-surface">Alex Rivera</p>
+<p class="text-[10px] text-stone-500 font-bold uppercase">Administrator</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 min-h-screen">
+<!-- Top Navigation -->
+<header class="flex justify-between items-center w-full px-6 py-2 bg-[#FDFCFB] dark:bg-stone-950 border-b border-stone-200 dark:border-stone-800 sticky top-0 z-30">
+<div class="flex items-center gap-4">
+<h1 class="font-h3 text-[#E1716F]">Workspace Members</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-stone-400" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-stone-400" data-icon="help">help</span>
+</div>
+<div class="w-px h-6 bg-stone-200"></div>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md flex items-center gap-2 hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-[18px]" data-icon="person_add">person_add</span>
+                    Invite Member
+                </button>
+</div>
+</header>
+<!-- Main Dashboard Content -->
+<div class="p-margin grid grid-cols-12 gap-gutter">
+<!-- Filter and Search Header -->
+<div class="col-span-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 bg-surface-container-low p-4 rounded-xl shadow-sm">
+<div class="relative w-full md:w-96">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-stone-400" data-icon="search">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary outline-none font-body-md text-sm" placeholder="Search by name or email..." type="text"/>
+</div>
+<div class="flex items-center gap-3 w-full md:w-auto">
+<div class="flex items-center gap-2 bg-surface px-3 py-2 rounded-lg border border-outline-variant cursor-pointer hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="filter_list">filter_list</span>
+<span class="font-label-md text-xs">Role</span>
+</div>
+<div class="flex items-center gap-2 bg-surface px-3 py-2 rounded-lg border border-outline-variant cursor-pointer hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="verified">verified</span>
+<span class="font-label-md text-xs">Status</span>
+</div>
+<button class="text-stone-500 font-label-md text-xs hover:text-primary transition-colors">Clear All</button>
+</div>
+</div>
+<!-- Member Table -->
+<div class="col-span-12 lg:col-span-9">
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_12px_24px_-10px_rgba(159,63,63,0.06)] overflow-hidden border border-stone-100">
+<!-- Bulk Actions Bar (Hidden by default, shown conditionally in logic) -->
+<div class="bg-[#F9EBEA] px-6 py-3 flex items-center justify-between border-b border-[#E1716F]/20">
+<div class="flex items-center gap-4">
+<span class="font-label-md text-[#E1716F]">3 members selected</span>
+<div class="h-4 w-px bg-[#E1716F]/30"></div>
+<button class="flex items-center gap-2 text-on-surface-variant font-label-md text-xs hover:text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="edit">edit</span> Change Role
+                            </button>
+<button class="flex items-center gap-2 text-on-surface-variant font-label-md text-xs hover:text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="block">block</span> Suspend
+                            </button>
+<button class="flex items-center gap-2 text-error font-label-md text-xs">
+<span class="material-symbols-outlined text-sm" data-icon="delete">delete</span> Delete
+                            </button>
+</div>
+<button class="text-stone-500"><span class="material-symbols-outlined" data-icon="close">close</span></button>
+</div>
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low/50">
+<th class="p-4 w-12"><input class="rounded text-primary focus:ring-primary border-outline-variant" type="checkbox"/></th>
+<th class="p-4 font-label-md text-stone-500 uppercase text-[10px] tracking-widest">Name + Avatar</th>
+<th class="p-4 font-label-md text-stone-500 uppercase text-[10px] tracking-widest">Email</th>
+<th class="p-4 font-label-md text-stone-500 uppercase text-[10px] tracking-widest">Role</th>
+<th class="p-4 font-label-md text-stone-500 uppercase text-[10px] tracking-widest">Status</th>
+<th class="p-4 font-label-md text-stone-500 uppercase text-[10px] tracking-widest">Joined Date</th>
+<th class="p-4 w-12"></th>
+</tr>
+</thead>
+<tbody class="divide-y divide-stone-100">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="p-4"><input class="rounded text-primary focus:ring-primary border-outline-variant" type="checkbox"/></td>
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full border-2 border-primary-container p-0.5">
+<img class="w-full h-full rounded-full object-cover" data-alt="A detailed digital portrait of a male professional with a confident expression, set against a warm, sun-drenched office background. The color palette features rich terracotta tones and soft creams. The lighting is soft and cinematic, highlighting a collaborative and productive atmosphere with high-end UI design aesthetics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDX_4XIhvFIof2NU6ziIV47N6ikmrrz5_4tNgo7fQvcVjGeE8kCIcaFLcLWb7R3DXprZ1YTBwVIkV4aIghJ6wDTE4RSca2ZfN0o8yeV3ct4MLubsNs9iJ1aFjPtl7THvgNbT-enmgLqT7dJlOeH-drCaS-1oMZNCnwPdkzwkP4hbMRilDW7A-yY_Bct31KRHVzSn7hBYkyedevoZbfkjKoLCC2Jw4UXpiBcj1ag3gAiXt4fPqfmiw9HY2vau9MMR5SItvtIH0Oyngs"/>
+</div>
+<div>
+<p class="font-label-md text-on-surface">Jordan Diaz</p>
+<p class="text-[10px] text-stone-400 font-bold uppercase tracking-tighter">Fullstack Dev</p>
+</div>
+</div>
+</td>
+<td class="p-4 text-sm font-body-md text-on-surface-variant">jordan.d@workspace.com</td>
+<td class="p-4">
+<div class="flex items-center gap-1 cursor-pointer group/role">
+<span class="font-label-md text-xs text-on-surface">Admin</span>
+<span class="material-symbols-outlined text-[16px] text-stone-400 group-hover/role:text-primary" data-icon="arrow_drop_down">arrow_drop_down</span>
+</div>
+</td>
+<td class="p-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-green-100 text-green-700">Active</span>
+</td>
+<td class="p-4 text-sm font-body-md text-stone-500">Oct 12, 2023</td>
+<td class="p-4">
+<button class="p-1 rounded-full hover:bg-stone-200 text-stone-400"><span class="material-symbols-outlined" data-icon="more_vert">more_vert</span></button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="p-4"><input checked="" class="rounded text-primary focus:ring-primary border-outline-variant" type="checkbox"/></td>
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full border-2 border-secondary-container p-0.5">
+<img class="w-full h-full rounded-full object-cover" data-alt="A creative professional woman with glasses looking thoughtfully at a screen, captured in a warm, minimalist coworking space. The environment uses a tonal palette of soft pinks, terracotta, and warm whites. The lighting is gentle and natural, emphasizing a high-focus and modern SaaS workspace environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZr6EESGU6x8j4jhsmcp01TOiB7PdyyiIuA8E75UnofN9y-ybXS86UGBwEwIfuZQFibOjD-X_XKIK0fP51HEiI-Oy0AYVLRKgH4c4cbID7BDJyLj5E3IwhmqrXdpaol7oqcOHbht1Xmc9Jui5h2lJ7F8GJYriFtqP9B7EjavKdoOSaqN9QqDgYE-A1D5WbYeTKQja54HPq3uys_cypbp9TMTPPM6-HAXBeg3ob735Fsdv1jBRMgw7DWREXMWDkstxT2wOU0Xlf-po"/>
+</div>
+<div>
+<p class="font-label-md text-on-surface">Sarah Chen</p>
+<p class="text-[10px] text-stone-400 font-bold uppercase tracking-tighter">UI Designer</p>
+</div>
+</div>
+</td>
+<td class="p-4 text-sm font-body-md text-on-surface-variant">chen.s@design.io</td>
+<td class="p-4">
+<div class="flex items-center gap-1 cursor-pointer">
+<span class="font-label-md text-xs text-on-surface">Leader</span>
+<span class="material-symbols-outlined text-[16px] text-stone-400" data-icon="arrow_drop_down">arrow_drop_down</span>
+</div>
+</td>
+<td class="p-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-orange-100 text-orange-700">Pending</span>
+</td>
+<td class="p-4 text-sm font-body-md text-stone-500">Jan 05, 2024</td>
+<td class="p-4">
+<button class="p-1 rounded-full hover:bg-stone-200 text-stone-400"><span class="material-symbols-outlined" data-icon="more_vert">more_vert</span></button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="p-4"><input checked="" class="rounded text-primary focus:ring-primary border-outline-variant" type="checkbox"/></td>
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full border-2 border-tertiary-container p-0.5">
+<img class="w-full h-full rounded-full object-cover" data-alt="A focused male developer working on a laptop in a cozy, warm-toned cafe-style workspace. The image is bathed in soft, amber light, reflecting a warm professional aesthetic. The color palette revolves around terracotta, light wood, and cream, creating a sophisticated yet inviting digital nomad atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTz2ayBtzKXMHcxmf-8dtf4VHednZi9JHWaC6IQy9A_V97GOOP0UFFQ-BjnLC-NPXjLBIlhEV_Da8xrpD9VmyDPYeMN7XE1U_J69vK4ZMEkEf20XrXjUQKyz1KmdTds7egcQsJ5Gp3eIou3D4A7vzd54wudxhreEDi0IbXwpaUClelVIHEL_vOwn0i7yDrWrGnnnQTI-fyD_0v8M9kkFWa0YjQ50oSfmLmA78vakW1AUXAQTjNWc5UDEqQ73zhrWk-BYr-6q0J4Cs"/>
+</div>
+<div>
+<p class="font-label-md text-on-surface">Marcus Knight</p>
+<p class="text-[10px] text-stone-400 font-bold uppercase tracking-tighter">QA Engineer</p>
+</div>
+</div>
+</td>
+<td class="p-4 text-sm font-body-md text-on-surface-variant">m.knight@techflow.net</td>
+<td class="p-4">
+<div class="flex items-center gap-1 cursor-pointer">
+<span class="font-label-md text-xs text-on-surface">Member</span>
+<span class="material-symbols-outlined text-[16px] text-stone-400" data-icon="arrow_drop_down">arrow_drop_down</span>
+</div>
+</td>
+<td class="p-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-stone-100 text-stone-500">Disabled</span>
+</td>
+<td class="p-4 text-sm font-body-md text-stone-500">Nov 22, 2023</td>
+<td class="p-4">
+<button class="p-1 rounded-full hover:bg-stone-200 text-stone-400"><span class="material-symbols-outlined" data-icon="more_vert">more_vert</span></button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="p-4"><input checked="" class="rounded text-primary focus:ring-primary border-outline-variant" type="checkbox"/></td>
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full border-2 border-secondary-container p-0.5">
+<img class="w-full h-full rounded-full object-cover" data-alt="Portrait of a female project manager in a clean, high-end office environment. She is smiling warmly, surrounded by soft-focus architectural details and warm interior lighting. The overall visual style is elegant and minimalist, using a terracotta and beige color theme that feels premium and human-centric." src="https://lh3.googleusercontent.com/aida-public/AB6AXuALvTmByNG0dgFTIp8QaK_vCvSkJjhXIDaaR9aM0VVui9fbEFJMPv1mPaugwSB5Gd8WBdufX09l_pnrdxPtE0bWMaQ0O97X10EMtz1xJSHBYvNFer5BB4eiOGafdFcPNPF_jcAEtgyNzET-v-DD1RmBdMPPTTSwTvctHRSxJO-5Dq6ovy0G7GCsazMch9evphVg5zzFYBSVCfO1ZY2obTUy8Q6zVrzUrR1aq0ItXbTEYbICP_jt_YzQztZtioF1EQu-FP3fd_zWwaA"/>
+</div>
+<div>
+<p class="font-label-md text-on-surface">Lena Adams</p>
+<p class="text-[10px] text-stone-400 font-bold uppercase tracking-tighter">Project Lead</p>
+</div>
+</div>
+</td>
+<td class="p-4 text-sm font-body-md text-on-surface-variant">lena@workspace.com</td>
+<td class="p-4">
+<div class="flex items-center gap-1 cursor-pointer">
+<span class="font-label-md text-xs text-on-surface">Leader</span>
+<span class="material-symbols-outlined text-[16px] text-stone-400" data-icon="arrow_drop_down">arrow_drop_down</span>
+</div>
+</td>
+<td class="p-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-green-100 text-green-700">Active</span>
+</td>
+<td class="p-4 text-sm font-body-md text-stone-500">Feb 11, 2024</td>
+<td class="p-4">
+<button class="p-1 rounded-full hover:bg-stone-200 text-stone-400"><span class="material-symbols-outlined" data-icon="more_vert">more_vert</span></button>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="p-4 border-t border-stone-100 flex items-center justify-between">
+<p class="text-xs font-body-md text-stone-500">Showing 4 of 42 members</p>
+<div class="flex items-center gap-2">
+<button class="p-1 rounded-lg border border-outline-variant hover:bg-stone-50 text-stone-400 disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-primary text-on-primary font-label-md text-xs">1</button>
+<button class="w-8 h-8 rounded-lg text-stone-500 font-label-md text-xs hover:bg-stone-50">2</button>
+<button class="w-8 h-8 rounded-lg text-stone-500 font-label-md text-xs hover:bg-stone-50">3</button>
+<button class="p-1 rounded-lg border border-outline-variant hover:bg-stone-50 text-stone-400">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar Widgets -->
+<div class="col-span-12 lg:col-span-3 space-y-gutter">
+<!-- Role Distribution Card -->
+<div class="bg-surface-container rounded-xl p-6 border border-[#E1716F]/10 shadow-sm">
+<h3 class="font-label-md text-stone-600 mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="pie_chart">pie_chart</span>
+                        Role Distribution
+                    </h3>
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<p class="text-sm font-body-md text-on-surface">Total Members</p>
+</div>
+<span class="font-h3 text-xl">42</span>
+</div>
+<div class="h-1.5 w-full bg-stone-200 rounded-full overflow-hidden flex">
+<div class="h-full bg-primary w-1/12"></div>
+<div class="h-full bg-secondary-container w-3/12"></div>
+<div class="h-full bg-tertiary-container w-8/12"></div>
+</div>
+<div class="grid grid-cols-1 gap-3 pt-2">
+<div class="flex items-center justify-between p-3 bg-surface rounded-lg">
+<span class="text-xs font-label-md text-stone-500 uppercase tracking-widest">Admins</span>
+<span class="text-sm font-bold text-on-surface">4</span>
+</div>
+<div class="flex items-center justify-between p-3 bg-surface rounded-lg">
+<span class="text-xs font-label-md text-stone-500 uppercase tracking-widest">Leaders</span>
+<span class="text-sm font-bold text-on-surface">12</span>
+</div>
+<div class="flex items-center justify-between p-3 bg-surface rounded-lg">
+<span class="text-xs font-label-md text-stone-500 uppercase tracking-widest">Members</span>
+<span class="text-sm font-bold text-on-surface">26</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Invitation Status Card -->
+<div class="bg-surface-container-lowest rounded-xl p-6 border border-stone-100 shadow-sm overflow-hidden relative">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-[#F9EBEA] rounded-full opacity-50"></div>
+<h3 class="font-label-md text-stone-600 mb-4 relative z-10">Pending Invites</h3>
+<div class="flex items-end gap-2 mb-4 relative z-10">
+<span class="font-h1 text-primary">8</span>
+<span class="text-xs font-body-md text-stone-400 pb-2">Expiring soon</span>
+</div>
+<button class="w-full border border-[#E1716F] text-primary py-2 rounded-lg font-label-md text-xs hover:bg-[#F9EBEA] transition-all relative z-10">
+                        Manage Invitations
+                    </button>
+</div>
+<!-- Admin Action Card -->
+<div class="bg-secondary text-on-secondary rounded-xl p-6 shadow-lg shadow-secondary/10">
+<h3 class="font-label-md mb-2">Workspace Health</h3>
+<p class="text-xs opacity-90 mb-4">You have 3 pending role requests that need approval.</p>
+<button class="w-full bg-white/10 hover:bg-white/20 py-2 rounded-lg font-label-md text-xs transition-colors flex items-center justify-center gap-2">
+                        Review Requests
+                        <span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</body></html>

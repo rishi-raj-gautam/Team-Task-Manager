@@ -1,0 +1,431 @@
+﻿<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Your Team | ProjectFlow</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#30312c",
+                        "secondary-fixed": "#ffdad9",
+                        "inverse-primary": "#ffb3b0",
+                        "surface-dim": "#dbdad3",
+                        "on-primary-fixed": "#410006",
+                        "background": "#fbfaf2",
+                        "outline-variant": "#dcc0be",
+                        "outline": "#897270",
+                        "on-primary-container": "#5a0a11",
+                        "on-background": "#1b1c17",
+                        "tertiary-container": "#9b9276",
+                        "surface-container-low": "#f5f4ec",
+                        "surface": "#fbfaf2",
+                        "on-secondary-fixed": "#360e10",
+                        "secondary-container": "#ffb7b7",
+                        "on-tertiary-container": "#302b16",
+                        "surface-container-highest": "#e3e3db",
+                        "on-surface-variant": "#564241",
+                        "on-secondary-fixed-variant": "#6b3839",
+                        "secondary-fixed-dim": "#fcb4b4",
+                        "primary-container": "#e1716f",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#ede2c2",
+                        "primary": "#9f3f3f",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "surface-tint": "#9f3f3f",
+                        "surface-container-high": "#e9e8e1",
+                        "secondary": "#864f50",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#d0c6a7",
+                        "primary-fixed-dim": "#ffb3b0",
+                        "on-surface": "#1b1c17",
+                        "on-secondary-container": "#7b4546",
+                        "inverse-on-surface": "#f2f1e9",
+                        "surface-container": "#efeee6",
+                        "primary-fixed": "#ffdad8",
+                        "on-tertiary-fixed": "#201b07",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#802829",
+                        "tertiary": "#655e45",
+                        "surface-bright": "#fbfaf2",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "8px",
+                        "lg": "48px",
+                        "sm": "12px",
+                        "md": "24px",
+                        "margin": "32px",
+                        "xl": "80px",
+                        "gutter": "24px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Manrope"],
+                        "status": ["Manrope"],
+                        "h3": ["Manrope"],
+                        "h1": ["Manrope"],
+                        "h2": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "body-lg": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "status": ["12px", {"lineHeight": "1", "letterSpacing": "0.02em", "fontWeight": "700"}],
+                        "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "h2": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fbfaf2;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-background min-h-screen flex">
+<!-- SideNavBar Component -->
+<aside class="h-screen w-64 fixed left-0 top-0 border-r bg-[#FDFBF9] border-orange-100/50 flex flex-col py-6 space-y-1 z-50">
+<div class="px-6 mb-8">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-white shadow-sm shadow-[#E1716F]/20">
+<span class="material-symbols-outlined" data-icon="hub">hub</span>
+</div>
+<div>
+<h2 class="text-lg font-black text-stone-900 leading-none">ProjectFlow</h2>
+<p class="text-[10px] uppercase tracking-widest text-stone-500 font-bold mt-1">Collaborative Hub</p>
+</div>
+</div>
+</div>
+<nav class="flex-1">
+<a class="text-stone-500 px-4 py-3 mx-2 my-1 flex items-center hover:bg-stone-100 rounded-lg transition-all group" href="#">
+<span class="material-symbols-outlined mr-3 transition-colors group-hover:text-primary" data-icon="dashboard">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="text-stone-500 px-4 py-3 mx-2 my-1 flex items-center hover:bg-stone-100 rounded-lg transition-all group" href="#">
+<span class="material-symbols-outlined mr-3 transition-colors group-hover:text-primary" data-icon="folder_special">folder_special</span>
+<span class="font-label-md text-label-md">Projects</span>
+</a>
+<a class="bg-[#FCECEB] text-[#E1716F] rounded-lg mx-2 my-1 flex items-center px-4 py-3 border-l-4 border-[#E1716F] shadow-sm shadow-[#E1716F]/5" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="group">group</span>
+<span class="font-label-md text-label-md">Your Team</span>
+</a>
+<a class="text-stone-500 px-4 py-3 mx-2 my-1 flex items-center hover:bg-stone-100 rounded-lg transition-all group" href="#">
+<span class="material-symbols-outlined mr-3 transition-colors group-hover:text-primary" data-icon="calendar_today">calendar_today</span>
+<span class="font-label-md text-label-md">Schedule</span>
+</a>
+<a class="text-stone-500 px-4 py-3 mx-2 my-1 flex items-center hover:bg-stone-100 rounded-lg transition-all group" href="#">
+<span class="material-symbols-outlined mr-3 transition-colors group-hover:text-primary" data-icon="settings">settings</span>
+<span class="font-label-md text-label-md">Settings</span>
+</a>
+</nav>
+<div class="px-4 mt-auto">
+<div class="bg-surface-container-low rounded-xl p-4 border border-outline-variant/30">
+<p class="text-xs text-stone-500 font-semibold mb-2">QUICK ACTIONS</p>
+<button class="w-full py-2 px-3 bg-white border border-outline-variant/50 rounded-lg text-stone-700 text-sm font-bold hover:shadow-sm transition-shadow flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="add_task">add_task</span>
+                    New Task
+                </button>
+</div>
+</div>
+</aside>
+<!-- Main Content Wrapper -->
+<main class="flex-1 ml-64 flex flex-col min-h-screen">
+<!-- TopAppBar Component -->
+<header class="flex justify-between items-center h-16 px-8 w-full sticky top-0 z-40 bg-[#FDFBF9] border-b border-orange-100/50 shadow-sm shadow-[#E1716F]/5 backdrop-blur-sm">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative w-full max-w-md group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-stone-400 group-focus-within:text-primary transition-colors" data-icon="search">search</span>
+<input class="w-full bg-[#F7EFE9] border-none rounded-full py-2 pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary-container transition-all" placeholder="Search team members or roles..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex gap-2">
+<button class="p-2 text-stone-500 hover:bg-[#F7EFE9] rounded-full transition-colors relative">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full border-2 border-[#FDFBF9]"></span>
+</button>
+<button class="p-2 text-stone-500 hover:bg-[#F7EFE9] rounded-full transition-colors">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+</button>
+</div>
+<div class="h-8 w-px bg-stone-200"></div>
+<div class="flex items-center gap-3">
+<div class="text-right">
+<p class="text-sm font-bold text-stone-800 leading-none">Alex Rivera</p>
+<p class="text-[10px] text-stone-500 font-medium">Product Designer</p>
+</div>
+<img alt="User profile avatar" class="w-10 h-10 rounded-full border-2 border-primary-container/20 object-cover shadow-sm" data-alt="A professional close-up headshot of a smiling male product designer with a modern, clean-shaven look. He is wearing a minimalist linen shirt in a soft cream color. The background is a bright, airy office with warm sunlight filtering through plants. The aesthetic is high-key, modern, and inviting, matching a warm light-mode project management interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZJyGCh3VAXGmrmIphzXK_DNr2R93GrTva3wzqYKqRMwxt0oONL4RVWhcieJif6pU0cOQefubRRB2M1RD1I5YWZfLqlhTtlYnirhDeZB5WQZaaP8ZosfqO62ONU1MA3t9Eu8QfrYyjVux7TjHVEhllq8C0Lt21xaPCz77C7Peuk9MaTaFP_xn23z0a3iPukmIQNJQavTK3BZLPlA31LnpHAKFmp38fRVQGEA9yb4TBARlPGLqZbJGd-YhDMM10XkBP-eHBlPByG6c"/>
+</div>
+</div>
+</header>
+<!-- Canvas Area -->
+<section class="p-margin flex-1">
+<div class="max-w-7xl mx-auto">
+<!-- Page Header -->
+<div class="mb-lg flex justify-between items-end">
+<div>
+<h1 class="font-h1 text-h1 text-stone-800 mb-xs">Your Team</h1>
+<p class="text-body-lg text-stone-500 max-w-2xl">Collaborate with fellow members across your active projects and stay connected with your workspace community.</p>
+</div>
+<div class="flex gap-3">
+<button class="px-md py-2 bg-surface-container-highest text-on-surface-variant font-label-md text-label-md rounded-lg flex items-center gap-2 hover:bg-stone-200 transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="filter_list">filter_list</span>
+                            Filter
+                        </button>
+</div>
+</div>
+<!-- Bento Grid Layout for Team Groups -->
+<div class="space-y-xl">
+<!-- Group: Mobile App Launch -->
+<div class="space-y-md">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 px-4 py-1.5 bg-primary-container/10 border border-primary-container/20 rounded-full">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<h2 class="text-label-md font-label-md text-primary tracking-wide uppercase">Mobile App Launch</h2>
+</div>
+<div class="flex-1 h-px bg-stone-200/50"></div>
+<span class="text-xs font-bold text-stone-400">4 MEMBERS</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Team Card 1 (Project Leader) -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-md shadow-sm shadow-[#E1716F]/5 hover:shadow-md hover:border-primary-container/40 transition-all group flex flex-col">
+<div class="flex justify-between items-start mb-md">
+<div class="relative">
+<img alt="Team member" class="w-16 h-16 rounded-2xl object-cover border-2 border-[#FCECEB] group-hover:border-primary-container transition-colors" data-alt="A professional portrait of a woman with a friendly expression, serving as a Project Leader. She is in a creative studio setting with soft, warm lighting. The palette consists of terracotta accents and cream backgrounds, creating a sophisticated and collaborative atmosphere. She has a high-quality, professional appearance suitable for a modern tech workspace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3o3lG0hLmgSOmJHykr4FenfJsMeAsTBrlvxyE7RFtTTYnv1U7N-hwkhTwcC1adTwd1Y-I4DFyyRW3-yVUTRSfTbOiNYbzjYPj5oqM0OKf5fmcNGdAfuij5RJhXyPrMhvtjJKJJAcK0XEZ-eooEBd1CBFHIlOqWDWFNnLbMXcG4JOmIoB76daE7iKFpoNF5dmiJnGHBgfNvA8HUOmS4WFGm8W07YFAXLLYswGYBRvkeC6F1gnD69mXdzosAU2IILqExxOewVZKKsg"/>
+<div class="absolute -bottom-1 -right-1 bg-primary text-white w-6 h-6 rounded-lg flex items-center justify-center border-2 border-white">
+<span class="material-symbols-outlined text-[14px]" data-icon="stars" data-weight="fill" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+</div>
+<div class="px-2 py-1 bg-primary-container text-white rounded text-[10px] font-status uppercase tracking-wider">LEADER</div>
+</div>
+<div class="mb-lg">
+<h3 class="font-h3 text-stone-900 mb-base leading-tight">Sarah Chen</h3>
+<p class="text-xs text-stone-500 font-medium">Lead UI/UX Architect</p>
+</div>
+<div class="mt-auto space-y-md">
+<div class="flex gap-1.5">
+<span class="px-2 py-1 bg-stone-100 text-stone-600 rounded text-[10px] font-bold">PROTOTYPING</span>
+<span class="px-2 py-1 bg-stone-100 text-stone-600 rounded text-[10px] font-bold">STRATEGY</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2 bg-secondary-fixed text-on-secondary-fixed-variant text-[12px] font-bold rounded-lg hover:bg-secondary-container transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="alternate_email">alternate_email</span>
+                                            Mention
+                                        </button>
+<button class="py-2 bg-surface-container-high text-stone-700 text-[12px] font-bold rounded-lg hover:bg-stone-200 transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="person">person</span>
+                                            Profile
+                                        </button>
+</div>
+</div>
+</div>
+<!-- Team Card 2 (Member) -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-md shadow-sm shadow-[#E1716F]/5 hover:shadow-md hover:border-primary-container/40 transition-all group flex flex-col">
+<div class="flex justify-between items-start mb-md">
+<img alt="Team member" class="w-16 h-16 rounded-2xl object-cover border-2 border-stone-100 group-hover:border-primary-container transition-colors" data-alt="Close-up headshot of a male team member with a warm smile, wearing a simple modern sweater. The background is a minimalist coworking space with light-toned wood and plants. The lighting is soft and natural, emphasizing a calm and professional work culture. The overall tone aligns with a cream and terracotta design system." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBysXWjhlEH3whLMZ8knvyPRg2mPvnJkyUcHH10en2K6o9Sbkfms6OaRGF1tXlQULF7S1UFI55yIf0AZzEYkDSJ3NHUQL-xwAcrf4yeD5anTkTFn8VJ873eQ41U23y0YXGmkDFVPOzoXaEiHT6rEhwmx5Eby4HFMkPKob_DUmMkLAj0uAG91llzjFPfKF9-YoHDz8sZY4grDLT9VvMwLx8rlxnCk4UF8gfgjk3zGmz98mQ7C3_SZgowFAokGFwLRypfZFBU8HwDhyU"/>
+<div class="px-2 py-1 bg-[#F7EFE9] text-stone-600 rounded text-[10px] font-status uppercase tracking-wider">MEMBER</div>
+</div>
+<div class="mb-lg">
+<h3 class="font-h3 text-stone-900 mb-base leading-tight">Marcus Thorne</h3>
+<p class="text-xs text-stone-500 font-medium">Senior Backend Engineer</p>
+</div>
+<div class="mt-auto space-y-md">
+<div class="flex gap-1.5">
+<span class="px-2 py-1 bg-stone-100 text-stone-600 rounded text-[10px] font-bold">API</span>
+<span class="px-2 py-1 bg-stone-100 text-stone-600 rounded text-[10px] font-bold">PYTHON</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2 bg-secondary-fixed text-on-secondary-fixed-variant text-[12px] font-bold rounded-lg hover:bg-secondary-container transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="chat">chat</span>
+                                            Message
+                                        </button>
+<button class="py-2 bg-surface-container-high text-stone-700 text-[12px] font-bold rounded-lg hover:bg-stone-200 transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="person">person</span>
+                                            Profile
+                                        </button>
+</div>
+</div>
+</div>
+<!-- Team Card 3 (Member) -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-md shadow-sm shadow-[#E1716F]/5 hover:shadow-md hover:border-primary-container/40 transition-all group flex flex-col">
+<div class="flex justify-between items-start mb-md">
+<img alt="Team member" class="w-16 h-16 rounded-2xl object-cover border-2 border-stone-100 group-hover:border-primary-container transition-colors" data-alt="Portrait of a male professional in a high-tech office environment. The scene is bright and airy with warm terracotta decorative elements in the background. He is wearing a dark, minimal polo shirt. The lighting is flattering and high-key, reinforcing the sophisticated and intentional brand identity of the workspace app." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3Cv_MTGskZXdiLVM9ooEDCFEQX59cjFudN8HPTdMgKYMjk59SHWlmagHAKB0b_AYO9Y0un_WQOaJKhGMtaIid34BCHwpYxCFtuJV3zoxa5H_C4my3x0j4ipCuGEhj5JfnA2VW9qEFLb-jow7d7WBfeSedz_6NmJOsyhmCb5m0w5DI9coQv7IZzZErphGfTDeFbQ_KNQvSHkckwXZ07Uwrwpi0H55jRcSNU0VFd2FHdsJsE8O55G_1a2LQgcfIiem7dmtoQJ_7aY8"/>
+<div class="px-2 py-1 bg-[#F7EFE9] text-stone-600 rounded text-[10px] font-status uppercase tracking-wider">MEMBER</div>
+</div>
+<div class="mb-lg">
+<h3 class="font-h3 text-stone-900 mb-base leading-tight">Julian Vane</h3>
+<p class="text-xs text-stone-500 font-medium">QA Automation Specialist</p>
+</div>
+<div class="mt-auto space-y-md">
+<div class="flex gap-1.5">
+<span class="px-2 py-1 bg-stone-100 text-stone-600 rounded text-[10px] font-bold">CYPRESS</span>
+<span class="px-2 py-1 bg-stone-100 text-stone-600 rounded text-[10px] font-bold">NODE</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2 bg-secondary-fixed text-on-secondary-fixed-variant text-[12px] font-bold rounded-lg hover:bg-secondary-container transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="chat">chat</span>
+                                            Message
+                                        </button>
+<button class="py-2 bg-surface-container-high text-stone-700 text-[12px] font-bold rounded-lg hover:bg-stone-200 transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="person">person</span>
+                                            Profile
+                                        </button>
+</div>
+</div>
+</div>
+<!-- Team Card 4 (Member) -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-md shadow-sm shadow-[#E1716F]/5 hover:shadow-md hover:border-primary-container/40 transition-all group flex flex-col">
+<div class="flex justify-between items-start mb-md">
+<img alt="Team member" class="w-16 h-16 rounded-2xl object-cover border-2 border-stone-100 group-hover:border-primary-container transition-colors" data-alt="A portrait of a woman in a professional but approachable workspace. She is leaning against a white desk with warm orange lighting behind her. She is wearing a modern blazer in a soft earthy tone. The aesthetic is clean and high-end, utilizing the warm professionalism theme with soft tans and focused lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIy5dCFUljh7-LpJgs3qO9zq0qMzrxa9EpdT4_xA79zrZEvB3kGph9Di4XEhRfIqEQv_1_CeP3ubN0IBmxGQWdO6wZdRUR_auzaookdTLazroLD30wUWdj_f31NwFvzMGIhlGv4YfXA9KAtDJXxvRnhavfnK9et0x2SHxtax4TiiISKiWprCVEuDnQz3Z902tT4zCeT-0_PUhIfCac8-PMuoznmn2dqxOLwcUNrSAX7ynFwEUbEDHKj8Wb_ekWb1S4pYerlDLAWE8"/>
+<div class="px-2 py-1 bg-[#F7EFE9] text-stone-600 rounded text-[10px] font-status uppercase tracking-wider">MEMBER</div>
+</div>
+<div class="mb-lg">
+<h3 class="font-h3 text-stone-900 mb-base leading-tight">Elena Rossi</h3>
+<p class="text-xs text-stone-500 font-medium">Digital Marketing Lead</p>
+</div>
+<div class="mt-auto space-y-md">
+<div class="flex gap-1.5">
+<span class="px-2 py-1 bg-stone-100 text-stone-600 rounded text-[10px] font-bold">SEO</span>
+<span class="px-2 py-1 bg-stone-100 text-stone-600 rounded text-[10px] font-bold">GROWTH</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2 bg-secondary-fixed text-on-secondary-fixed-variant text-[12px] font-bold rounded-lg hover:bg-secondary-container transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="chat">chat</span>
+                                            Message
+                                        </button>
+<button class="py-2 bg-surface-container-high text-stone-700 text-[12px] font-bold rounded-lg hover:bg-stone-200 transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="person">person</span>
+                                            Profile
+                                        </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Group: Website Redesign -->
+<div class="space-y-md">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 px-4 py-1.5 bg-secondary-container/10 border border-secondary-container/20 rounded-full">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<h2 class="text-label-md font-label-md text-secondary tracking-wide uppercase">Website Redesign</h2>
+</div>
+<div class="flex-1 h-px bg-stone-200/50"></div>
+<span class="text-xs font-bold text-stone-400">3 MEMBERS</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Team Card 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-md shadow-sm shadow-[#E1716F]/5 hover:shadow-md hover:border-primary-container/40 transition-all group flex flex-col">
+<div class="flex justify-between items-start mb-md">
+<div class="relative">
+<img alt="Team member" class="w-16 h-16 rounded-2xl object-cover border-2 border-[#FCECEB] group-hover:border-primary-container transition-colors" data-alt="A portrait of a male developer in a modern, plant-filled office. He is smiling and has an approachable demeanor. The background features warm-toned wooden panels and soft light, creating a calm and professional environment. The visual style is sophisticated and minimalist, consistent with the brand's earthy color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCRbssKu9uPgNupn8ugOPYdd0EjgJJwvH6FeXvYr90zd04DiV8cMjoAfE_ajIiyq6ePTv5AmlzBJLQQrc7Y9egbdwOGqZ-YFNFAsUbqXgq3qB7klI-9NdwpB00VhxjJPtGVPSeTn4zHA2y_V1_qvzjkfAaxA-3hnvyFOBaR4tG_AzuTR1Cl3mNoMHIuGmLWf4sbII1RoRMA1gzvk6R0uPnBZipJfgOt5_aSCBaAUruYxGJVrn3eDqjLGhyTAxJv8JSVB_Jw4goVA0"/>
+<div class="absolute -bottom-1 -right-1 bg-primary text-white w-6 h-6 rounded-lg flex items-center justify-center border-2 border-white">
+<span class="material-symbols-outlined text-[14px]" data-icon="stars" data-weight="fill" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+</div>
+<div class="px-2 py-1 bg-primary-container text-white rounded text-[10px] font-status uppercase tracking-wider">LEADER</div>
+</div>
+<div class="mb-lg">
+<h3 class="font-h3 text-stone-900 mb-base leading-tight">Oliver Smith</h3>
+<p class="text-xs text-stone-500 font-medium">Head of Creative</p>
+</div>
+<div class="mt-auto space-y-md">
+<div class="flex gap-1.5">
+<span class="px-2 py-1 bg-stone-100 text-stone-600 rounded text-[10px] font-bold">BRANDING</span>
+<span class="px-2 py-1 bg-stone-100 text-stone-600 rounded text-[10px] font-bold">MOTION</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2 bg-secondary-fixed text-on-secondary-fixed-variant text-[12px] font-bold rounded-lg hover:bg-secondary-container transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="alternate_email">alternate_email</span>
+                                            Mention
+                                        </button>
+<button class="py-2 bg-surface-container-high text-stone-700 text-[12px] font-bold rounded-lg hover:bg-stone-200 transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="person">person</span>
+                                            Profile
+                                        </button>
+</div>
+</div>
+</div>
+<!-- Team Card 2 (User's card potentially) -->
+<div class="bg-primary-container/5 border-2 border-primary-container/40 rounded-xl p-md shadow-sm shadow-[#E1716F]/10 hover:shadow-md transition-all group flex flex-col ring-4 ring-primary-container/5">
+<div class="flex justify-between items-start mb-md">
+<img alt="You" class="w-16 h-16 rounded-2xl object-cover border-2 border-primary-container" data-alt="A professional close-up headshot of a smiling male product designer with a modern look. The background is a bright office with warm sunlight. The aesthetic is modern and inviting, matching a warm light-mode project management interface with terracotta accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNlv9Q6bHt0WjxQ7lVfay28sSu08yjBV0kQokwW2JLxfk4SLnPAM-08-9kPLb381zc3jwEp6V6r158a-Ok13nc1JlrAogEe0sTixAaEJuW2jF_NBWmW0BWV5-zNxoUKIDSXJhfra3yqcJbEWXvPphBh_8TqqBirtccUZk8tFj6t9OMT3zUAUUuI4fUR4JIursWc_uYs2KwnM08pu5tnbMqIcuMpiVNWGzS7hL2J2H9NH1Wak5pg0x_Kgq4MDUFFJNQiJRO-9CrA3c"/>
+<div class="px-2 py-1 bg-primary text-white rounded text-[10px] font-status uppercase tracking-wider">YOU</div>
+</div>
+<div class="mb-lg">
+<h3 class="font-h3 text-stone-900 mb-base leading-tight">Alex Rivera</h3>
+<p class="text-xs text-stone-500 font-medium">Product Designer</p>
+</div>
+<div class="mt-auto space-y-md">
+<div class="flex gap-1.5">
+<span class="px-2 py-1 bg-white border border-primary-container/20 text-primary rounded text-[10px] font-bold">Figma</span>
+<span class="px-2 py-1 bg-white border border-primary-container/20 text-primary rounded text-[10px] font-bold">React</span>
+</div>
+<div class="w-full text-center py-2 bg-primary-container/10 border border-primary-container/20 text-primary text-[11px] font-bold rounded-lg italic">
+                                        Editing Profile Disabled
+                                    </div>
+</div>
+</div>
+<!-- Team Card 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-md shadow-sm shadow-[#E1716F]/5 hover:shadow-md hover:border-primary-container/40 transition-all group flex flex-col">
+<div class="flex justify-between items-start mb-md">
+<img alt="Team member" class="w-16 h-16 rounded-2xl object-cover border-2 border-stone-100 group-hover:border-primary-container transition-colors" data-alt="A portrait of a professional woman in a contemporary office space. She is smiling naturally and looks engaged. The background includes soft, warm tones and elegant furniture, projecting a sophisticated and professional image. The overall visual style is grounded in a cream and terracotta palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdy0w2z4En8WI9zZSfpdb6flzO3bwUgbSPVHx6QLtstUpCKPtuK-98PFHG0zUfS7252TarltmWO1hE1UYVRh0sPl7Yuj2cphYqO3aUY2Yyw6O-MujlUUcxrMPUJjNgRU8iB8OE4Gc8lhpUoYqXWzT42lth8yBwkLS7fz7HxIv2IwqhoZ0KKFmXoZDsWQtlAKbWyl-nagW2TATP9fOQrz_f-JpcuzNP9IY7BHlCzhkmLu2yBcB5obgMKNjs4yhQdWxEmo8p0MPS3IE"/>
+<div class="px-2 py-1 bg-[#F7EFE9] text-stone-600 rounded text-[10px] font-status uppercase tracking-wider">MEMBER</div>
+</div>
+<div class="mb-lg">
+<h3 class="font-h3 text-stone-900 mb-base leading-tight">Sofia Kim</h3>
+<p class="text-xs text-stone-500 font-medium">Content Strategist</p>
+</div>
+<div class="mt-auto space-y-md">
+<div class="flex gap-1.5">
+<span class="px-2 py-1 bg-stone-100 text-stone-600 rounded text-[10px] font-bold">COPY</span>
+<span class="px-2 py-1 bg-stone-100 text-stone-600 rounded text-[10px] font-bold">SEO</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2 bg-secondary-fixed text-on-secondary-fixed-variant text-[12px] font-bold rounded-lg hover:bg-secondary-container transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="chat">chat</span>
+                                            Message
+                                        </button>
+<button class="py-2 bg-surface-container-high text-stone-700 text-[12px] font-bold rounded-lg hover:bg-stone-200 transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="person">person</span>
+                                            Profile
+                                        </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating Action Button - Hidden based on suppression rules for Member Details but kept as placeholder for team coordination if needed -->
+<!-- No FAB here to comply with focused task mandate on sub-pages -->
+</div>
+</section>
+<!-- Page Footer / Bottom Spacing -->
+<footer class="h-24 flex items-center justify-center px-margin">
+<p class="text-[10px] font-status uppercase tracking-[0.2em] text-stone-300">ProjectFlow Workspace ┬⌐ 2024 ΓÇó Built for Collaborative Excellence</p>
+</footer>
+</main>
+</body></html>
